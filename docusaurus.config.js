@@ -97,15 +97,21 @@ const config = {
           },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'CTFSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'CTF例题',
           },
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'ruankaoSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '软考',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'OPSSidebar',
+            position: 'left',
+            label: '运维',
           },
           {to: '/blog', label: 'Timeline', position: 'right'},
           {
