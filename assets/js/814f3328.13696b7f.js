@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkblog=globalThis.webpackChunkblog||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"K8S \u5b89\u88c5\u8be6\u7ec6\u6b65\u9aa4\u8bb0\u5f55","permalink":"/blog/2025-11-09-K8SInstall","unlisted":false,"date":"2025-11-09T00:00:00.000Z"}]}')}}]);
