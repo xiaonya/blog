@@ -33,3 +33,18 @@ notes:
   permalink: /notes
   description: notes tag description
 
+Fedora:
+  label: Fedora
+  permalink: /fedora
+  description: Fedora tag description
+
+SWAP:
+  label: SWAP
+  permalink: /swap
+  description: SWAP tag description
+
+ZRAM:
+  label: ZRAM
+  permalink: /zram
+  description: ZRAM tag description
+
