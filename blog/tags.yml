@@ -28,4 +28,8 @@ tutorial:
   permalink: /tutorial
   description: tutorial tag description
 
+notes:
+  label: notes
+  permalink: /notes
+  description: notes tag description
 

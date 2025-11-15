@@ -2,7 +2,7 @@
 slug: 2025-11-09-K8SInstall
 title: K8S 安装详细步骤记录
 authors: xiaonya
-tags: ["K8S","containerd","calico","kubeadm","getting-started","tutorial"]
+tags: ["K8S","containerd","getting-started","tutorial"]
 ---
 
 记录初学K8S时的安装步骤以及踩到的坑，供自己和他人参考。
