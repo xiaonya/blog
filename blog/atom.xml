@@ -126,8 +126,6 @@
         </author>
         <category label="K8S" term="K8S"/>
         <category label="containerd" term="containerd"/>
-        <category label="calico" term="calico"/>
-        <category label="kubeadm" term="kubeadm"/>
         <category label="getting-started" term="getting-started"/>
         <category label="tutorial" term="tutorial"/>
     </entry>
