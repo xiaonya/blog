@@ -9,20 +9,27 @@ tags: ["K8S","containerd","getting-started","tutorial"]
 <!-- truncate -->
 
 # K8S 安装记录
+
+## 目录
+- [K8S 安装记录](#k8s-安装记录)
+  - [目录](#目录)
+  - [目标](#目标)
+  - [环境](#环境)
+  - [详细步骤](#详细步骤)
+    - [1. 准备环境](#1-准备环境)
+    - [2. 安装containerd运行时](#2-安装containerd运行时)
+    - [3. 配置containerd](#3-配置containerd)
+    - [4. 安装kubeadm、kubelet、kubectl](#4-安装kubeadmkubeletkubectl)
+    - [5. 初始化master节点](#5-初始化master节点)
+    - [6. 安装网络插件calico](#6-安装网络插件calico)
+    - [7. 加入worker节点](#7-加入worker节点)
+    - [8. 检查集群状态](#8-检查集群状态)
 ## 目标
-k8s集群，使用containerd作为容器运行时，calico作为网络插件，coredns作为dns服务，etcd作为集群存储。
+手工建立k8s集群，使用containerd作为容器运行时，calico作为网络插件，coredns作为dns服务，etcd作为集群存储。
 ## 环境
-Fedora 42 \
-Linux 6.16.8-200.fc42.x86_64
-## 基本思路
-1. 准备环境
-2. 安装containerd
-3. 配置ctr配置以及镜像源
-4. 安装kubeadm、kubelet、kubectl
-5. 初始化master节点
-6. 安装网络插件calico
-7. 加入worker节点
-8. 检查集群状态
+- Fedora 42
+- Linux 6.16.8-200.fc42.x86_64
+
 
 ## 详细步骤
 ### 1. 准备环境

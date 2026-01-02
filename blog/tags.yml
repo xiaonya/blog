@@ -48,3 +48,7 @@ ZRAM:
   permalink: /zram
   description: ZRAM tag description
 
+daily-life:
+  label: daily-life
+  permalink: /daily-life
+  description: daily-life tag description
