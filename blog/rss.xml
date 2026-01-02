@@ -4,10 +4,53 @@
         <title>xiaonya Blog</title>
         <link>http://xiaonya.github.io/blog</link>
         <description>xiaonya Blog</description>
-        <lastBuildDate>Sun, 09 Nov 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 01 Jan 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[2025 年终总结]]></title>
+            <link>http://xiaonya.github.io/blog/2026-01-01-2025-summary</link>
+            <guid>http://xiaonya.github.io/blog/2026-01-01-2025-summary</guid>
+            <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[2025 年回顾：经历和成长的一年，记录点滴，展望未来。]]></description>
+            <content:encoded><![CDATA[<p>2025 年回顾：经历和成长的一年，记录点滴，展望未来。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目录">目录<a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E7%9B%AE%E5%BD%95" class="hash-link" aria-label="Direct link to 目录" title="Direct link to 目录" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#2025-%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93" class="">2025 年终总结</a>
+<ul>
+<li class=""><a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E7%9B%AE%E5%BD%95" class="">目录</a>
+<ul>
+<li class=""><a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E5%89%8D%E8%A8%80" class="">前言</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E5%B9%B4%E5%88%9D%E6%8A%89%E6%8B%A9" class="">年初抉择</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1" class="">毕业设计</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="前言">前言<a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E5%89%8D%E8%A8%80" class="hash-link" aria-label="Direct link to 前言" title="Direct link to 前言" translate="no">​</a></h3>
+<p>发现很多的朋友都写了一篇年终报告，无论是否学习了很多知识，达成了很多目标。虽然我过去并没有这个习惯，但今年发生了很多事情，也从学生转变为了社畜，觉得为了自己，也可以跟风写个回顾总结的。</p>
+<blockquote>
+<p><del>尽管人类从历史中学到的唯一教训，就是人类没有从历史中学到任何教训</del> XD</p>
+</blockquote>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="年初抉择">年初抉择<a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E5%B9%B4%E5%88%9D%E6%8A%89%E6%8B%A9" class="hash-link" aria-label="Direct link to 年初抉择" title="Direct link to 年初抉择" translate="no">​</a></h3>
+<p>2025 年年初，我面临了一个重要的抉择：因为我同时收到了小米和家附近一家银行的秋招offer。小米薪资高点，但离家远离学校近，而银行薪资低但WLB，而且离家近，在咨询了了几位我认为比我思考层级更深的朋友后，我得到了的结果是：</p>
+<ul>
+<li class="">朋友A，在上海实习时遇到的同济，新国立大哥，用人力资源的理论算出来的结果认为家附近的银行其实与小米的薪资差距并没有想象中那么大，毕竟小米的生活成本更高，也离家远，没什么资源能调配</li>
+<li class="">朋友B，济南金融老登，认为WLB更重要，毕竟他自己就在尝试朝着更好的WLB去转型</li>
+<li class="">朋友C，波斯顿大学留学的朋友，认为小米的发展潜力更大</li>
+</ul>
+<p>综合考虑后，我还是选择了家附近的银行，放弃了小米1.5倍的薪资。但是从现在一年后的视角来看，我还不能下结论这个选择是对还是错。。。。</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="毕业设计">毕业设计<a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1" class="hash-link" aria-label="Direct link to 毕业设计" title="Direct link to 毕业设计" translate="no">​</a></h3>
+<p>2025 年上半年还在做毕业设计，这段时间应该是大学时期编程掌握的最好的一段时间了，学着别人的项目，自己也跟着搓，说不定是自己第一次接触开源项目的代码。</p>
+<blockquote>
+<p><del>学习别人的小巧思，制作自己的大构思</del></p>
+</blockquote>
+<p>诶，但该说不说，感觉自己选的项目还是挺不赖的，难度适中，架构也不复杂，属于编程水平入门慢慢看也能看得懂的程度，这段时间没有课程任务，纯自己学习做事，中途还跟朋友去了上海，去了南京4年都没去过的一些地方玩，回来还顺便把驾照一次拿到手了，这段时间感觉像是人生中最后一段惬意又充实的时光。</p>
+<p>最后的毕业答辩倒是挺简短的，介绍完架构，原理，功能后，老师们一句听不懂就放我下去了，好尴尬，不过也算是完成了任务。</p>]]></content:encoded>
+            <category>daily-life</category>
+        </item>
         <item>
             <title><![CDATA[K8S 安装详细步骤记录]]></title>
             <link>http://xiaonya.github.io/blog/2025-11-09-K8SInstall</link>
@@ -15,22 +58,35 @@
             <pubDate>Sun, 09 Nov 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[记录初学K8S时的安装步骤以及踩到的坑，供自己和他人参考。]]></description>
             <content:encoded><![CDATA[<p>记录初学K8S时的安装步骤以及踩到的坑，供自己和他人参考。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目录">目录<a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E7%9B%AE%E5%BD%95" class="hash-link" aria-label="Direct link to 目录" title="Direct link to 目录" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#k8s-%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95" class="">K8S 安装记录</a>
+<ul>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E7%9B%AE%E5%BD%95" class="">目录</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E7%9B%AE%E6%A0%87" class="">目标</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E7%8E%AF%E5%A2%83" class="">环境</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4" class="">详细步骤</a>
+<ul>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#1-%E5%87%86%E5%A4%87%E7%8E%AF%E5%A2%83" class="">1. 准备环境</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#2-%E5%AE%89%E8%A3%85containerd%E8%BF%90%E8%A1%8C%E6%97%B6" class="">2. 安装containerd运行时</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#3-%E9%85%8D%E7%BD%AEcontainerd" class="">3. 配置containerd</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#4-%E5%AE%89%E8%A3%85kubeadmkubeletkubectl" class="">4. 安装kubeadm、kubelet、kubectl</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#5-%E5%88%9D%E5%A7%8B%E5%8C%96master%E8%8A%82%E7%82%B9" class="">5. 初始化master节点</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#6-%E5%AE%89%E8%A3%85%E7%BD%91%E7%BB%9C%E6%8F%92%E4%BB%B6calico" class="">6. 安装网络插件calico</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#7-%E5%8A%A0%E5%85%A5worker%E8%8A%82%E7%82%B9" class="">7. 加入worker节点</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#8-%E6%A3%80%E6%9F%A5%E9%9B%86%E7%BE%A4%E7%8A%B6%E6%80%81" class="">8. 检查集群状态</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目标">目标<a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E7%9B%AE%E6%A0%87" class="hash-link" aria-label="Direct link to 目标" title="Direct link to 目标" translate="no">​</a></h2>
-<p>k8s集群，使用containerd作为容器运行时，calico作为网络插件，coredns作为dns服务，etcd作为集群存储。</p>
+<p>手工建立k8s集群，使用containerd作为容器运行时，calico作为网络插件，coredns作为dns服务，etcd作为集群存储。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="环境">环境<a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E7%8E%AF%E5%A2%83" class="hash-link" aria-label="Direct link to 环境" title="Direct link to 环境" translate="no">​</a></h2>
-<p>Fedora 42 <br>
-<!-- -->Linux 6.16.8-200.fc42.x86_64</p>
-<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="基本思路">基本思路<a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E5%9F%BA%E6%9C%AC%E6%80%9D%E8%B7%AF" class="hash-link" aria-label="Direct link to 基本思路" title="Direct link to 基本思路" translate="no">​</a></h2>
-<ol>
-<li class="">准备环境</li>
-<li class="">安装containerd</li>
-<li class="">配置ctr配置以及镜像源</li>
-<li class="">安装kubeadm、kubelet、kubectl</li>
-<li class="">初始化master节点</li>
-<li class="">安装网络插件calico</li>
-<li class="">加入worker节点</li>
-<li class="">检查集群状态</li>
-</ol>
+<ul>
+<li class="">Fedora 42</li>
+<li class="">Linux 6.16.8-200.fc42.x86_64</li>
+</ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="详细步骤">详细步骤<a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4" class="hash-link" aria-label="Direct link to 详细步骤" title="Direct link to 详细步骤" translate="no">​</a></h2>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="1-准备环境">1. 准备环境<a href="http://xiaonya.github.io/blog/2025-11-09-K8SInstall#1-%E5%87%86%E5%A4%87%E7%8E%AF%E5%A2%83" class="hash-link" aria-label="Direct link to 1. 准备环境" title="Direct link to 1. 准备环境" translate="no">​</a></h3>
 <ul>
