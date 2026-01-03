@@ -26,7 +26,7 @@
 <li class=""><a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E7%AB%8B%E4%B8%8Bflag" class="">立下flag</a></li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="前言">前言<a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E5%89%8D%E8%A8%80" class="hash-link" aria-label="Direct link to 前言" title="Direct link to 前言" translate="no">​</a></h3>
-<p>发现很多的朋友都写了一篇年终报告，无论是否学习了很多知识，达成了很多目标。虽然我过去并没有这个习惯，但今年发生了很多事情，也从学生转变为了社畜，觉得为了自己，也可以跟风写个回顾总结。</p>
+<p>发现很多的朋友都写了一篇年终报告，无论是否学习了很多知识，达成了很多目标。虽然我过去并没有这个习惯，但今年发生了很多事情，也从学生转变为了社畜，觉得为了自己，也可以跟风写个回顾总结。不过我的文笔并不是很好，只是突然有些表达欲</p>
 <blockquote>
 <p><del>尽管人类从历史中学到的唯一教训，就是人类没有从历史中学到任何教训</del> :3</p>
 </blockquote>
@@ -37,7 +37,7 @@
 <li class="">朋友B，济南金融老登，认为WLB更重要，毕竟他自己就在尝试朝着更好的WLB去转型</li>
 <li class="">朋友C，波斯顿大学留学的朋友，认为小米的发展潜力更大</li>
 </ul>
-<p>综合考虑后，我还是选择了家附近的银行，放弃了小米1.5倍的薪资。但是从现在一年后的视角来看，我还不能下结论这个选择是对还是错。。。。</p>
+<p>综合考虑后，我还是选择了家附近的银行，放弃了小米1.5倍的薪资。但是从现在半年后的视角来看，我还不能下结论这个选择是对还是错。。。。</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="毕业设计">毕业设计<a href="http://xiaonya.github.io/blog/2026-01-01-2025-summary#%E6%AF%95%E4%B8%9A%E8%AE%BE%E8%AE%A1" class="hash-link" aria-label="Direct link to 毕业设计" title="Direct link to 毕业设计" translate="no">​</a></h3>
 <p>2025 年上半年还在做毕业设计，这段时间应该是大学时期编程掌握的最好的一段时间了，学着别人的项目，自己也跟着搓，说不定是自己第一次接触开源项目的代码。</p>
 <blockquote>
@@ -64,13 +64,62 @@
 <li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->学一下ebpf，感觉工作上会用得上的</li>
 <li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->ebpf接触了，Linux底层也得学了，但暂时还不知道学习路径应该怎么安排</li>
 <li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->平时有空也能再学学之前玩的网安，好玩</li>
-<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->游戏可能要少玩点了，时间不是很够</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->游戏还是可以偶尔玩玩的，但时间应该会少了</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->可以的话，再多写点博客，记录一下学习和生活</li>
+<li class="task-list-item"><input type="checkbox" disabled=""> <!-- -->公司需要的话可能还得考考证啥的，等需要了再说:3</li>
 </ul>]]></content>
         <author>
             <name>xiaonya</name>
             <uri>https://blog.xiaonya.com</uri>
         </author>
         <category label="daily-life" term="daily-life"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[天钡小主机CPU故障排查记录]]></title>
+        <id>http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure</id>
+        <link href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure"/>
+        <updated>2025-12-30T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[记录一次非常罕见的天钡mini主机CPU硬件故障排查过程。]]></summary>
+        <content type="html"><![CDATA[<p>记录一次非常罕见的天钡mini主机CPU硬件故障排查过程。</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目录">目录<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E7%9B%AE%E5%BD%95" class="hash-link" aria-label="Direct link to 目录" title="Direct link to 目录" translate="no">​</a></h2>
+<ul>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E7%9B%AE%E5%BD%95" class="">目录</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E8%83%8C%E6%99%AF%E4%B8%8E%E5%BC%82%E5%B8%B8%E7%8E%B0%E8%B1%A1" class="">背景与异常现象</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E5%88%9D%E6%AD%A5%E5%B0%9D%E8%AF%95%E6%8E%92%E9%99%A4%E8%99%9A%E6%8B%9F%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E9%97%AE%E9%A2%98" class="">初步尝试：排除虚拟化与系统问题</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E6%B7%B1%E5%85%A5%E6%8E%92%E6%9F%A5%E6%A0%A1%E9%AA%8C%E5%92%8C%E5%BC%82%E5%B8%B8" class="">深入排查：校验和异常</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E6%95%85%E9%9A%9C%E5%AE%9A%E4%BD%8Dcpu%E6%9F%90%E6%A0%B8%E5%BF%83%E6%95%85%E9%9A%9C" class="">故障定位：CPU某核心故障</a></li>
+<li class=""><a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E4%B8%B4%E6%97%B6%E8%A7%A3%E5%86%B3%E4%B8%8E%E5%90%8E%E7%BB%AD" class="">临时解决与后续</a></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="背景与异常现象">背景与异常现象<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E8%83%8C%E6%99%AF%E4%B8%8E%E5%BC%82%E5%B8%B8%E7%8E%B0%E8%B1%A1" class="hash-link" aria-label="Direct link to 背景与异常现象" title="Direct link to 背景与异常现象" translate="no">​</a></h2>
+<p>前几天终于有空了，于是尝试在自己买的二手天钡miniPC上重装一套家里云的系统，但是重装完之后发现Proxmox VE系统根本无法往虚拟机中正常安装系统。后续即使不用虚拟化也会出现问题，遂开始尝试排查。最初是在proxmox VE中安装虚拟机时，安装媒介的检查会失败，Fedora绕过安装媒介检查安装后无法完整走完安装流程，Debian安装过程可能kernal panic。可能正常通过，但安装完后虚拟机的apt包管理工具明显不正常，更新过程中总是会提示aptcache文件损坏，哈希不正确，无法安装。</p>
+<p>如图1所示：
+temp</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="初步尝试排除虚拟化与系统问题">初步尝试：排除虚拟化与系统问题<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E5%88%9D%E6%AD%A5%E5%B0%9D%E8%AF%95%E6%8E%92%E9%99%A4%E8%99%9A%E6%8B%9F%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E9%97%AE%E9%A2%98" class="hash-link" aria-label="Direct link to 初步尝试：排除虚拟化与系统问题" title="Direct link to 初步尝试：排除虚拟化与系统问题" translate="no">​</a></h2>
+<p>最初怀疑是proxmox VE的问题，尝试升级proxmox VE版本，重新安装proxmox VE，均无效，便放弃虚拟机了。后续尝试在物理机上直接安装Fedora，安装过程中出现的问题与虚拟机中的完全相同，安装Debian也能跑通安装程序，但出现相同的aptcache损坏问题。</p>
+<p>当时还怀疑是这套硬件与Linux不兼容，安装Windows后一切正常，但在Windows里的VMware Workstation中安装Linux虚拟机时也会出现相同的问题，进一步排除了Linux兼容性问题。后续尝试使用memtest86对内存进行测试，一切正常，测试全部pass，再在安装的Debian中使用smartctl对硬盘进行检测，也没有发现问题。硬盘健康度100%。</p>
+<p>如图2所示：
+temp</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="深入排查校验和异常">深入排查：校验和异常<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E6%B7%B1%E5%85%A5%E6%8E%92%E6%9F%A5%E6%A0%A1%E9%AA%8C%E5%92%8C%E5%BC%82%E5%B8%B8" class="hash-link" aria-label="Direct link to 深入排查：校验和异常" title="Direct link to 深入排查：校验和异常" translate="no">​</a></h2>
+<p>事情的转机出现在我将shell交给了我的朋友turbo，他也测试了同样的结果，但他通过apt的debug模式发现，确实是文件的校验和不符合要求，于是他用sha256sum对下载的文件进行多次计算，发现文件计算的哈希结果有时候是正确的，有时候是错误的，且错误的结果并不总是相同的。</p>
+<p>如图3所示：
+temp</p>
+<p>继续深一步排错发现，哪怕文件已经放入/dev/shm这种内存文件系统中，计算出来的哈希值依然会不稳定，说明问题并不在硬盘上。</p>
+<p>如图4所示：
+temp</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障定位cpu某核心故障">故障定位：CPU某核心故障<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E6%95%85%E9%9A%9C%E5%AE%9A%E4%BD%8Dcpu%E6%9F%90%E6%A0%B8%E5%BF%83%E6%95%85%E9%9A%9C" class="hash-link" aria-label="Direct link to 故障定位：CPU某核心故障" title="Direct link to 故障定位：CPU某核心故障" translate="no">​</a></h2>
+<p>但是内存测试又是通过的，那么继续深入，turbo想到了使用指定CPU核心来进行计算，结果发现当指定某些核心时，计算结果总是错误的，而指定其他核心时，计算结果总是正确的，这下终于锁定问题在CPU上了。</p>
+<p>如图5所示：
+temp</p>
+<p>脚本如下：</p>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token shebang important">#!/bin/bash</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="临时解决与后续">临时解决与后续<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E4%B8%B4%E6%97%B6%E8%A7%A3%E5%86%B3%E4%B8%8E%E5%90%8E%E7%BB%AD" class="hash-link" aria-label="Direct link to 临时解决与后续" title="Direct link to 临时解决与后续" translate="no">​</a></h2>
+<p>最终，使用在Linux内核中禁用有问题的CPU核心，系统一切恢复正常，apt包管理工具也不再报错。</p>
+<p>由于这台电脑是二手🐴上淘的，因此只能联系卖家帮忙走售后进行返修维保。至此，问题将交给天钡的售后来处理，静待结果。</p>]]></content>
+        <author>
+            <name>xiaonya</name>
+            <uri>https://blog.xiaonya.com</uri>
+        </author>
+        <category label="errors" term="errors"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[K8S 安装详细步骤记录]]></title>
