@@ -52,3 +52,8 @@ daily-life:
   label: daily-life
   permalink: /daily-life
   description: daily-life tag description
+
+errors:
+  label: errors
+  permalink: /errors
+  description: errors tag description
