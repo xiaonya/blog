@@ -106,11 +106,12 @@ temp</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障定位cpu某核心故障">故障定位：CPU某核心故障<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E6%95%85%E9%9A%9C%E5%AE%9A%E4%BD%8Dcpu%E6%9F%90%E6%A0%B8%E5%BF%83%E6%95%85%E9%9A%9C" class="hash-link" aria-label="Direct link to 故障定位：CPU某核心故障" title="Direct link to 故障定位：CPU某核心故障" translate="no">​</a></h2>
 <p>但是内存测试又是通过的，那么继续深入，turbo想到了使用指定CPU核心来进行计算，结果发现当指定某些核心时，计算结果总是错误的，而指定其他核心时，计算结果总是正确的，这下终于锁定问题在CPU上了。</p>
 <p>如图5所示：
-temp</p>
+<img decoding="async" loading="lazy" src="https://www.imgur.la/images/2026/01/04/IMG_20260103_141436_916.jpg" alt="IMG 20260103 141436 916" class="img_ev3q"></p>
 <p>脚本如下：</p>
 <div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token shebang important">#!/bin/bash</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="临时解决与后续">临时解决与后续<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E4%B8%B4%E6%97%B6%E8%A7%A3%E5%86%B3%E4%B8%8E%E5%90%8E%E7%BB%AD" class="hash-link" aria-label="Direct link to 临时解决与后续" title="Direct link to 临时解决与后续" translate="no">​</a></h2>
-<p>最终，使用在Linux内核中禁用有问题的CPU核心，系统一切恢复正常，apt包管理工具也不再报错。</p>
+<p>最终，使用在Linux内核中禁用有问题的CPU核心，系统一切恢复正常，apt包管理工具也不再报错。
+<img decoding="async" loading="lazy" src="https://www.imgur.la/images/2026/01/04/IMG_20260103_141439_849.jpg" alt="IMG 20260103 141439 849" class="img_ev3q"></p>
 <p>由于这台电脑是二手🐴上淘的，因此只能联系卖家帮忙走售后进行返修维保。至此，问题将交给天钡的售后来处理，静待结果。</p>]]></content:encoded>
             <category>errors</category>
         </item>
