@@ -76,8 +76,8 @@
             <link>http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure</link>
             <guid>http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure</guid>
             <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
-            <description><![CDATA[记录一次非常罕见的天钡mini主机CPU硬件故障排查过程。]]></description>
-            <content:encoded><![CDATA[<p>记录一次非常罕见的天钡mini主机CPU硬件故障排查过程。</p>
+            <description><![CDATA[记录一次比较少见的天钡mini主机CPU硬件故障排查过程。]]></description>
+            <content:encoded><![CDATA[<p>记录一次比较少见的天钡mini主机CPU硬件故障排查过程。</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="目录">目录<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E7%9B%AE%E5%BD%95" class="hash-link" aria-label="Direct link to 目录" title="Direct link to 目录" translate="no">​</a></h2>
 <ul>
 <li class=""><a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E7%9B%AE%E5%BD%95" class="">目录</a></li>
@@ -88,30 +88,26 @@
 <li class=""><a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E4%B8%B4%E6%97%B6%E8%A7%A3%E5%86%B3%E4%B8%8E%E5%90%8E%E7%BB%AD" class="">临时解决与后续</a></li>
 </ul>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="背景与异常现象">背景与异常现象<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E8%83%8C%E6%99%AF%E4%B8%8E%E5%BC%82%E5%B8%B8%E7%8E%B0%E8%B1%A1" class="hash-link" aria-label="Direct link to 背景与异常现象" title="Direct link to 背景与异常现象" translate="no">​</a></h2>
-<p>前几天终于有空了，于是尝试在自己买的二手天钡miniPC上重装一套家里云的系统，但是重装完之后发现Proxmox VE系统根本无法往虚拟机中正常安装系统。后续即使不用虚拟化也会出现问题，遂开始尝试排查。最初是在proxmox VE中安装虚拟机时，安装媒介的检查会失败，Fedora绕过安装媒介检查安装后无法完整走完安装流程，Debian安装过程可能kernal panic。可能正常通过，但安装完后虚拟机的apt包管理工具明显不正常，更新过程中总是会提示aptcache文件损坏，哈希不正确，无法安装。</p>
-<p>如图1所示：
-temp</p>
+<p><img decoding="async" loading="lazy" alt="天钡主机" src="http://xiaonya.github.io/assets/images/IMG_20260103_141331_903-da20a9a136334a1c9c71c16198d5249c.jpg" width="720" height="558" class="img_ev3q"></p>
+<p>前几天终于有空了，于是尝试在自己买的二手天钡miniPC上重装一套家里云的系统，但是重装完之后发现Proxmox VE系统根本无法往虚拟机中正常安装系统。后续即使不用虚拟化也会出现问题，遂开始尝试排查。最初是在proxmox VE中安装虚拟机时，安装媒介的检查会失败，Fedora绕过安装媒介检查安装后无法完整走完安装流程，Debian安装过程可能kernal panic。可能正常通过，但安装完后虚拟机的apt包管理工具明显不正常，更新过程中总是会提示apt cache文件损坏，哈希不正确，无法安装。</p>
+<p><img decoding="async" loading="lazy" alt="apt异常" src="http://xiaonya.github.io/assets/images/IMG_20260103_141342_444-954435018827153677fbbdb27685a20d.jpg" width="678" height="608" class="img_ev3q"></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="初步尝试排除虚拟化与系统问题">初步尝试：排除虚拟化与系统问题<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E5%88%9D%E6%AD%A5%E5%B0%9D%E8%AF%95%E6%8E%92%E9%99%A4%E8%99%9A%E6%8B%9F%E5%8C%96%E4%B8%8E%E7%B3%BB%E7%BB%9F%E9%97%AE%E9%A2%98" class="hash-link" aria-label="Direct link to 初步尝试：排除虚拟化与系统问题" title="Direct link to 初步尝试：排除虚拟化与系统问题" translate="no">​</a></h2>
 <p>最初怀疑是proxmox VE的问题，尝试升级proxmox VE版本，重新安装proxmox VE，均无效，便放弃虚拟机了。后续尝试在物理机上直接安装Fedora，安装过程中出现的问题与虚拟机中的完全相同，安装Debian也能跑通安装程序，但出现相同的aptcache损坏问题。</p>
 <p>当时还怀疑是这套硬件与Linux不兼容，安装Windows后一切正常，但在Windows里的VMware Workstation中安装Linux虚拟机时也会出现相同的问题，进一步排除了Linux兼容性问题。后续尝试使用memtest86对内存进行测试，一切正常，测试全部pass，再在安装的Debian中使用smartctl对硬盘进行检测，也没有发现问题。硬盘健康度100%。</p>
-<p>如图2所示：
-temp</p>
+<p>temp</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="深入排查校验和异常">深入排查：校验和异常<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E6%B7%B1%E5%85%A5%E6%8E%92%E6%9F%A5%E6%A0%A1%E9%AA%8C%E5%92%8C%E5%BC%82%E5%B8%B8" class="hash-link" aria-label="Direct link to 深入排查：校验和异常" title="Direct link to 深入排查：校验和异常" translate="no">​</a></h2>
 <p>事情的转机出现在我将shell交给了我的朋友turbo，他也测试了同样的结果，但他通过apt的debug模式发现，确实是文件的校验和不符合要求，于是他用sha256sum对下载的文件进行多次计算，发现文件计算的哈希结果有时候是正确的，有时候是错误的，且错误的结果并不总是相同的。</p>
-<p>如图3所示：
-temp</p>
+<p><img decoding="async" loading="lazy" alt="哈希错误" src="http://xiaonya.github.io/assets/images/IMG_20260103_141425_169-db354871d192493ee782d4a9e6af4e3f.jpg" width="1059" height="562" class="img_ev3q"></p>
 <p>继续深一步排错发现，哪怕文件已经放入/dev/shm这种内存文件系统中，计算出来的哈希值依然会不稳定，说明问题并不在硬盘上。</p>
-<p>如图4所示：
-temp</p>
+<p><img decoding="async" loading="lazy" alt="内存排查" src="http://xiaonya.github.io/assets/images/IMG_20260103_141435_480-5aa03d9f17dc4ed15d6787ea6454b030.jpg" width="1159" height="359" class="img_ev3q"></p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="故障定位cpu某核心故障">故障定位：CPU某核心故障<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E6%95%85%E9%9A%9C%E5%AE%9A%E4%BD%8Dcpu%E6%9F%90%E6%A0%B8%E5%BF%83%E6%95%85%E9%9A%9C" class="hash-link" aria-label="Direct link to 故障定位：CPU某核心故障" title="Direct link to 故障定位：CPU某核心故障" translate="no">​</a></h2>
-<p>但是内存测试又是通过的，那么继续深入，turbo想到了使用指定CPU核心来进行计算，结果发现当指定某些核心时，计算结果总是错误的，而指定其他核心时，计算结果总是正确的，这下终于锁定问题在CPU上了。</p>
-<p>如图5所示：
-<img decoding="async" loading="lazy" src="https://www.imgur.la/images/2026/01/04/IMG_20260103_141436_916.jpg" alt="IMG 20260103 141436 916" class="img_ev3q"></p>
+<p>但是内存测试又是通过的，那么继续深入，turbo想到了使用指定CPU核心来进行计算，结果发现当指定某些核心时，计算结果总是错误的，而指定其他核心时，计算结果总是正确的，这下终于锁定问题在CPU上了。检查了AMD的CPU微码更新，微码是正常的。</p>
+<p><img decoding="async" loading="lazy" alt="单核心计算" src="http://xiaonya.github.io/assets/images/IMG_20260103_141436_916-4524a8431778a4ce387285906f17f882.jpg" width="1142" height="899" class="img_ev3q"></p>
 <p>脚本如下：</p>
-<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token shebang important">#!/bin/bash</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span></code></pre></div></div>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token keyword" style="color:#00009f">for</span><span class="token plain"> </span><span class="token for-or-select variable" style="color:#36acaa">c</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">in</span><span class="token plain"> </span><span class="token variable" style="color:#36acaa">$(</span><span class="token variable function" style="color:#d73a49">seq</span><span class="token variable" style="color:#36acaa"> </span><span class="token variable number" style="color:#36acaa">0</span><span class="token variable" style="color:#36acaa"> </span><span class="token variable number" style="color:#36acaa">15</span><span class="token variable" style="color:#36acaa">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">do</span><span class="token plain">   </span><span class="token builtin class-name">echo</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">"core </span><span class="token string variable" style="color:#36acaa">$c</span><span class="token string" style="color:#e3116c">"</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain">   </span><span class="token keyword" style="color:#00009f">for</span><span class="token plain"> </span><span class="token for-or-select variable" style="color:#36acaa">i</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">in</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">1</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">2</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">3</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">4</span><span class="token plain"> </span><span class="token number" style="color:#36acaa">5</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">do</span><span class="token plain"> taskset </span><span class="token parameter variable" style="color:#36acaa">-c</span><span class="token plain"> </span><span class="token variable" style="color:#36acaa">$c</span><span class="token plain"> sha256sum /dev/shm/big</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">done</span><span class="token punctuation" style="color:#393A34">;</span><span class="token plain"> </span><span class="token keyword" style="color:#00009f">done</span><br></span></code></pre></div></div>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="临时解决与后续">临时解决与后续<a href="http://xiaonya.github.io/blog/2025-12-30-TianBeiCPUFailure#%E4%B8%B4%E6%97%B6%E8%A7%A3%E5%86%B3%E4%B8%8E%E5%90%8E%E7%BB%AD" class="hash-link" aria-label="Direct link to 临时解决与后续" title="Direct link to 临时解决与后续" translate="no">​</a></h2>
-<p>最终，使用在Linux内核中禁用有问题的CPU核心，系统一切恢复正常，apt包管理工具也不再报错。
-<img decoding="async" loading="lazy" src="https://www.imgur.la/images/2026/01/04/IMG_20260103_141439_849.jpg" alt="IMG 20260103 141439 849" class="img_ev3q"></p>
+<p>最终，使用在Linux内核参数中禁用了有问题的CPU核心，系统一切恢复正常，apt包管理工具也不再报错。
+<img decoding="async" loading="lazy" alt="禁用有问题核心后" src="http://xiaonya.github.io/assets/images/IMG_20260103_141439_849-acc4dabee2527b5064d02fe641b01003.jpg" width="870" height="617" class="img_ev3q"></p>
 <p>由于这台电脑是二手🐴上淘的，因此只能联系卖家帮忙走售后进行返修维保。至此，问题将交给天钡的售后来处理，静待结果。</p>]]></content:encoded>
             <category>errors</category>
         </item>
