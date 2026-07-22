@@ -91,6 +91,12 @@ const config = {
         items: [
           {
             type: 'docSidebar',
+            sidebarId: 'K8SSidebar',
+            position: 'left',
+            label: 'K8S',
+          },
+          {
+            type: 'docSidebar',
             sidebarId: 'CTFSidebar',
             position: 'left',
             label: 'CTF例题',
