@@ -14,7 +14,7 @@ sidebar_position: 1
 | 章节 | 内容 | 怎么用 |
 |---|---|---|
 | [入门基础概念](./01-基础概念.md) | 集群构成、API 对象模型、工作负载、网络与存储模型 | **读一遍**，先建立全局图，不求记住细节 |
-| [CKA 备考笔记](./CKA/00-CKA备考总览.md) | 按周推进的实操笔记与复习测试（Week 0-1 ~ Week 6） | **当主线**，每周实操完做闭卷测试 |
+| [CKA 备考笔记](./CKA/00-CKA学习计划.md) | 学习计划（Week 0 ~ 12）+ 按周推进的实操笔记与复习测试 | **当主线**，先看计划表确认本周任务，实操完做闭卷测试 |
 | [命令速查](./Command.md) | 按场景分类的 kubectl / kubeadm 命令 | **别通读**，练习时忘了就翻，考前过一遍 |
 
 ## 学习路径
@@ -30,7 +30,7 @@ sidebar_position: 1
 | Week 5 | Service、CoreDNS、Ingress、NetworkPolicy、Gateway API | [Service 与 Endpoints](./CKA/Week5/01-Service与Endpoints.md) |
 | Week 6 | PV/PVC、StorageClass、StatefulSet、存储排障 | [PV / PVC 生命周期](./CKA/Week6/01-PV与PVC生命周期.md) |
 
-考纲权重、考试形式与备考策略见 [CKA 备考总览](./CKA/00-CKA备考总览.md)。
+考纲权重、考试形式与备考策略见 [CKA 备考总览](./CKA/01-CKA备考总览.md)。
 
 ## 参考教程
 

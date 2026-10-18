@@ -1,6 +1,6 @@
 ---
 title: "CKA 备考总览"
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # CKA 备考总览
