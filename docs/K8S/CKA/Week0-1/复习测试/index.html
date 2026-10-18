@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-K8S/CKA/Week0-1/复习测试" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Week 0-1 复习测试 | xiaonya</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="http://xiaonya.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="http://xiaonya.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="http://xiaonya.github.io/docs/K8S/CKA/Week0-1/复习测试"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Week 0-1 复习测试 | xiaonya"><meta data-rh="true" name="description" content="覆盖：week-0 基线准备 / week-1 集群架构与 kubeadm / K8S安装前置操作 / K8S集群初始化 / CKA备考"><meta data-rh="true" property="og:description" content="覆盖：week-0 基线准备 / week-1 集群架构与 kubeadm / K8S安装前置操作 / K8S集群初始化 / CKA备考"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="http://xiaonya.github.io/docs/K8S/CKA/Week0-1/复习测试"><link data-rh="true" rel="alternate" href="http://xiaonya.github.io/docs/K8S/CKA/Week0-1/复习测试" hreflang="en"><link data-rh="true" rel="alternate" href="http://xiaonya.github.io/docs/K8S/CKA/Week0-1/复习测试" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Week 0-1 复习测试","item":"http://xiaonya.github.io/docs/K8S/CKA/Week0-1/复习测试"}]}</script><link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="xiaonya RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="xiaonya Atom Feed"><link rel="stylesheet" href="/assets/css/styles.aaaead2f.css">
+<script src="/assets/js/runtime~main.ebc631e5.js" defer="defer"></script>
+<script src="/assets/js/main.c104b00c.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.jpg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.jpg" alt="Cat" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.jpg" alt="Cat" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">xiaonya</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/K8S/Intro">K8S</a><a class="navbar__item navbar__link" href="/docs/CTF/intro">CTF例题</a><a class="navbar__item navbar__link" href="/docs/ruankao/intro">软考</a><a class="navbar__item navbar__link" href="/docs/operation/intro">运维</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/blog">Timeline</a><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/K8S/Intro"><span title="介绍" class="linkLabel_WmDU">介绍</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/K8S/基础概念"><span title="入门基础概念" class="linkLabel_WmDU">入门基础概念</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/docs/K8S/CKA/CKA备考总览"><span title="CKA 备考笔记" class="categoryLinkLabel_W154">CKA 备考笔记</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/K8S/CKA/CKA备考总览"><span title="CKA 备考总览" class="linkLabel_WmDU">CKA 备考总览</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" tabindex="0" href="/docs/K8S/CKA/Week0-1/基线准备"><span title="Week 0-1 · 起步与集群搭建" class="categoryLinkLabel_W154">Week 0-1 · 起步与集群搭建</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/K8S/CKA/Week0-1/基线准备"><span title="Week 0 · 基线准备" class="linkLabel_WmDU">Week 0 · 基线准备</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/K8S/CKA/Week0-1/安装前置操作"><span title="集群搭建 · 安装前置操作" class="linkLabel_WmDU">集群搭建 · 安装前置操作</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/K8S/CKA/Week0-1/集群初始化"><span title="集群初始化 · kubeadm 与 Calico" class="linkLabel_WmDU">集群初始化 · kubeadm 与 Calico</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/K8S/CKA/Week0-1/集群架构与控制平面组件"><span title="Week 1 · 集群架构与控制平面组件" class="linkLabel_WmDU">Week 1 · 集群架构与控制平面组件</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-3 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/K8S/CKA/Week0-1/复习测试"><span title="Week 0-1 复习测试" class="linkLabel_WmDU">Week 0-1 复习测试</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/K8S/CKA/Week2/Pod创建与生命周期"><span title="Week 2 · 核心对象与 kubectl" class="categoryLinkLabel_W154">Week 2 · 核心对象与 kubectl</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/K8S/CKA/Week3/ConfigMap"><span title="Week 3 · 配置与密钥" class="categoryLinkLabel_W154">Week 3 · 配置与密钥</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/K8S/CKA/Week4/Deployment与滚动更新"><span title="Week 4 · 工作负载与调度" class="categoryLinkLabel_W154">Week 4 · 工作负载与调度</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/K8S/CKA/Week5/Service与Endpoints"><span title="Week 5 · 服务与网络" class="categoryLinkLabel_W154">Week 5 · 服务与网络</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/docs/K8S/CKA/Week6/PV与PVC生命周期"><span title="Week 6 · 存储" class="categoryLinkLabel_W154">Week 6 · 存储</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/K8S/Command"><span title="K8S 命令速查" class="linkLabel_WmDU">K8S 命令速查</span></a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">CKA 备考笔记</span></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Week 0-1 · 起步与集群搭建</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Week 0-1 复习测试</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Week 0-1 复习测试</h1></header>
+<blockquote>
+<p>覆盖：week-0 基线准备 / week-1 集群架构与 kubeadm / K8S安装前置操作 / K8S集群初始化 / CKA备考
+规则：<strong>闭卷</strong>（不看笔记不看文档），建议限时 40 分钟；实操题在集群上做
+答案在文末，做完再翻</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一填空题每空-1-分共-20-分">一、填空题（每空 1 分，共 20 分）<a href="#一填空题每空-1-分共-20-分" class="hash-link" aria-label="Direct link to 一、填空题（每空 1 分，共 20 分）" title="Direct link to 一、填空题（每空 1 分，共 20 分）" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>CKA 考试时长 ____ 小时，及格线 ____ 分，含 ____ 次免费重考。</p>
+</li>
+<li class="">
+<p>2026 版考纲五大域中权重最高的两个：<strong>____（30%）</strong> 和 <strong>____（25%）</strong>。</p>
+</li>
+<li class="">
+<p>考试是开卷考，但只允许开 1 个额外标签页，且只能访问三个官方域名：<strong><strong>、</strong></strong>、____。</p>
+</li>
+<li class="">
+<p>kubectl 生成 YAML 骨架的参数组合是 <code>kubectl run xxx --image=xxx ____ -o yaml</code>。</p>
+</li>
+<li class="">
+<p>控制平面中，唯一对外 API 入口是 ____，集群唯一的状态数据库是 ____。</p>
+</li>
+<li class="">
+<p>决定 Pod 调度到哪个节点的组件是 ____（它只做决策不执行），实际按 PodSpec 拉起容器的是 ____。</p>
+</li>
+<li class="">
+<p>控制平面组件以 ____ Pod 形式运行在 ____ 目录下，由 ____ 直接监控该目录拉起，不经过 apiserver。</p>
+</li>
+<li class="">
+<p>你的集群：Pod 网段是 ____，Service 网段是 ____，CNI 插件是 ____。</p>
+</li>
+<li class="">
+<p><code>kubeadm join</code> 需要两个鉴权要素：____ 和 ____。</p>
+</li>
+<li class="">
+<p>查看集群所有证书到期时间的命令：<code>kubeadm ____ ____</code>。</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二判断题每题-2-分共-10-分">二、判断题（每题 2 分，共 10 分）<a href="#二判断题每题-2-分共-10-分" class="hash-link" aria-label="Direct link to 二、判断题（每题 2 分，共 10 分）" title="Direct link to 二、判断题（每题 2 分，共 10 分）" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>（ ）K8S 要求关闭 swap，Fedora 的 zram swap 用 <code>swapoff -a</code> 就能永久关闭。</p>
+</li>
+<li class="">
+<p>（ ）containerd 默认 <code>SystemdCgroup = false</code>，装完必须改成 <code>true</code> 否则 kubelet 起不来。</p>
+</li>
+<li class="">
+<p>（ ）给 containerd 配 hosts.toml mirror 指向阿里云，就能完美解决 <code>registry.k8s.io</code> 被墙的问题。</p>
+</li>
+<li class="">
+<p>（ ）<code>kubectl get pods -A -o wide</code> 里 calico-node、kube-proxy 显示节点 IP，是因为它们是静态 Pod。</p>
+</li>
+<li class="">
+<p>（ ）<code>kubeadm init</code> 完成后不装 CNI，节点状态也会是 Ready，只是 Pod 之间不通。</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三简答题每题-8-分共-40-分">三、简答题（每题 8 分，共 40 分）<a href="#三简答题每题-8-分共-40-分" class="hash-link" aria-label="Direct link to 三、简答题（每题 8 分，共 40 分）" title="Direct link to 三、简答题（每题 8 分，共 40 分）" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>控制平面组件为什么必须 <code>hostNetwork: true</code> + 静态 Pod？用&quot;鸡生蛋&quot;的逻辑讲清楚。（提示：kubelet 启动时序）</p>
+</li>
+<li class="">
+<p><code>kubeadm init</code> 完成后，<code>kubectl get pods -A</code> 发现 CoreDNS 一直 Pending，节点 NotReady。写出排查思路和最可能的原因。</p>
+</li>
+<li class="">
+<p>你的集群选了 Calico 而不是 Flannel。写出两者至少 3 个区别（网络模式、性能、策略支持、默认网段任选三个）。</p>
+</li>
+<li class="">
+<p>你集群 Pod 网段是 10.244.0.0/16，每节点按 /24 分配。这个集群最多能有多少节点？如果想支持更多节点，两条路分别是什么？</p>
+</li>
+<li class="">
+<p>kubelet 与 apiserver 通信的证书，和控制平面组件自己的证书（/etc/kubernetes/pki/ 下），在&quot;自动续期&quot;上有什么区别？组件证书到期了怎么续？</p>
+</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="四实操题每题-10-分共-30-分在集群上做">四、实操题（每题 10 分，共 30 分，在集群上做）<a href="#四实操题每题-10-分共-30-分在集群上做" class="hash-link" aria-label="Direct link to 四、实操题（每题 10 分，共 30 分，在集群上做）" title="Direct link to 四、实操题（每题 10 分，共 30 分，在集群上做）" translate="no">​</a></h2>
+<ol>
+<li class="">
+<p>不查笔记：查看 apiserver 证书的有效期（两种方法：openssl 和 kubeadm，各写一条）。</p>
+</li>
+<li class="">
+<p>执行 <code>kubectl get pods -n kube-system -o wide</code>，把结果里的 Pod 分成两类（显示节点 IP 的 / 显示 10.244.x.x 的），并各说明一类原因。</p>
+</li>
+<li class="">
+<p>排障模拟：kubelet 日志刷屏 <code>Unable to register mirror pod because node is not registered yet</code>，apiserver 起不来。凭你搭建集群的经验，写出完整的根因链（从第一环到最后一环）和解决方法。</p>
+</li>
+</ol>
+<hr>
+<h1>答案与解析</h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="一填空">一、填空<a href="#一填空" class="hash-link" aria-label="Direct link to 一、填空" title="Direct link to 一、填空" translate="no">​</a></h2>
+<ol>
+<li class=""><strong>2 小时 / 66 分 / 1 次</strong></li>
+<li class=""><strong>故障排除（30%）</strong>、<strong>集群架构、安装和配置（25%）</strong>。注意 2026 新版：工作负载降到 15%，存储 10%，服务网络 20%。</li>
+<li class=""><strong>kubernetes.io/docs</strong>、<strong>kubernetes.io/blog</strong>、<strong>github.com/kubernetes</strong>。搜索引擎和 AI 一律不可用。</li>
+<li class=""><strong><code>--dry-run=client</code></strong>（不是 <code>none</code>，老写法已弃用）</li>
+<li class=""><strong>kube-apiserver</strong> / <strong>etcd</strong>。排障口诀：apiserver 坏了 = 全部命令报错；etcd 坏了 = apiserver 报错。</li>
+<li class=""><strong>kube-scheduler</strong> / <strong>kubelet</strong></li>
+<li class=""><strong>静态</strong> Pod / <strong>/etc/kubernetes/manifests/</strong> / <strong>kubelet</strong></li>
+<li class=""><strong>10.244.0.0/16</strong> / <strong>10.96.0.0/12</strong> / <strong>Calico</strong>（v3.29.1，IPPool 已改为 10.244.0.0/16）</li>
+<li class=""><strong>token</strong> / <strong>discovery-token-ca-cert-hash</strong>（让新节点信任集群 CA）</li>
+<li class=""><strong><code>kubeadm certs check-expiration</code></strong></li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="二判断">二、判断<a href="#二判断" class="hash-link" aria-label="Direct link to 二、判断" title="Direct link to 二、判断" translate="no">​</a></h2>
+<ol>
+<li class=""><strong>✗</strong> — <code>swapoff -a</code> 只关当前，重启复活。zram 是 systemd service 管理的，必须 <code>systemctl mask systemd-zram-setup@zram0.service</code>。</li>
+<li class=""><strong>✓</strong> — K8S 硬性要求（cgroup 驱动一致）。</li>
+<li class=""><strong>✗</strong> — mirror 会追加 <code>?ns=registry.k8s.io</code> 且不重写路径，阿里云 404。本项目实际用的是 kubeadm <code>--image-repository registry.aliyuncs.com/google_containers</code>。</li>
+<li class=""><strong>✗</strong> — 原因是 <code>hostNetwork: true</code>，和静态 Pod 无关。etcd/apiserver 既是静态 Pod 又是 hostNetwork，但 coredns 是普通 Pod。</li>
+<li class=""><strong>✗</strong> — 没 CNI 节点直接 NotReady，kubelet 上报的 NetworkReady 条件不满足。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="三简答要点对照">三、简答（要点对照）<a href="#三简答要点对照" class="hash-link" aria-label="Direct link to 三、简答（要点对照）" title="Direct link to 三、简答（要点对照）" translate="no">​</a></h2>
+<ol>
+<li class=""><strong>鸡生蛋</strong>：kubelet 启动要先拉起 apiserver，但那时 Calico 还没装，Pod 网络不存在——如果 apiserver 依赖 Pod 网络，它永远起不来。所以控制平面必须 <strong>hostNetwork</strong>（直接用节点网卡，IP 稳定在 192.168.10.12:6443）+ <strong>静态 Pod</strong>（kubelet 直接读 manifests 目录拉起，不需要 apiserver 存在）。这同时解释了：pause 拉不到 → 沙箱建不了 → apiserver 起不来 → 整个集群挂。</li>
+<li class=""><strong>排查思路</strong>：<code>kubectl get nodes</code> 看是否 NotReady → 是 → CNI 问题。最可能原因：<strong>没装 CNI，或 CNI 的 IPPool 网段与 <code>--pod-network-cidr</code> 不一致</strong>。验证：<code>kubectl get ippool default-ipv4-ippool -o jsonpath=&#x27;{.spec.cidr}&#x27;</code>。</li>
+<li class="">三点任意组合：<strong>网络模式</strong>（Calico BGP 三层路由 / Flannel VXLAN 二层隧道）；<strong>性能</strong>（Calico 直接路由更高）；<strong>NetworkPolicy</strong>（Calico 支持 / Flannel 不支持）；<strong>默认 Pod 网段</strong>（Calico 192.168.0.0/16 / Flannel 10.244.0.0/16）。</li>
+<li class="">10.244.0.0/16 按 /24 切 = <strong>256 个节点</strong>。两条路：<strong>① 扩大 Pod 网段</strong>（init 时定死，/12 = 4096 节点）；<strong>② 减小每节点分配粒度</strong>（Calico IPPool 配 /26 或 /28，同样池子节点数翻 4~16 倍；Flannel 固定 /24 做不到）。</li>
+<li class="">kubelet 的客户端证书<strong>自动轮换</strong>（默认开启，无需干预）；<strong>控制平面组件证书不自动续期</strong>（服务端证书被广泛信任，轮换需管理员显式操作）。续期：<code>kubeadm certs renew all</code>，然后<strong>重启静态 Pod</strong>（删掉 manifests 下的 Pod 或 kill 容器，kubelet 自动用新证书重建）。缓解因素：<code>kubeadm upgrade</code> 会顺带续期。</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="四实操参考命令">四、实操（参考命令）<a href="#四实操参考命令" class="hash-link" aria-label="Direct link to 四、实操（参考命令）" title="Direct link to 四、实操（参考命令）" translate="no">​</a></h2>
+<ol>
+<li class="">方法一：<code>openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text -noout | grep -A2 Validity</code>
+方法二：<code>kubeadm certs check-expiration</code>（一次看全部）</li>
+<li class="">节点 IP 类（hostNetwork，共享节点网络栈，直接操作 iptables/路由表或需稳定监听）：calico-node、kube-proxy、etcd、kube-apiserver、kube-controller-manager、kube-scheduler。
+Pod IP 类（普通 Pod，CNI 分配 IP）：coredns、calico-kube-controllers。</li>
+<li class="">根因链：kubelet 建静态 Pod 前先建 sandbox → sandbox 要拉 pause 镜像 → containerd 默认从 <code>registry.k8s.io</code> 拉（被墙）→ pause 拉不到 → 沙箱建不了 → apiserver 起不来 → 不监听 6443 → kubelet 注册不了节点 → 循环刷屏报错（报错是果不是因）。
+解决：改 <code>/etc/containerd/config.toml</code> 中 <code>pinned_images.sandbox</code> 指向阿里云 → <code>systemctl restart containerd</code>。注意 <strong>containerd 2.x 用新配置名</strong>，网上的 1.x 写法不生效。</li>
+</ol>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="计分与建议">计分与建议<a href="#计分与建议" class="hash-link" aria-label="Direct link to 计分与建议" title="Direct link to 计分与建议" translate="no">​</a></h2>
+<ul>
+<li class=""><strong>85 分以上</strong>：Week 0-1 过关，直接推进 Week 2</li>
+<li class=""><strong>70~84</strong>：错的题回对应笔记重看，重点是错的简答题（简答题 = 排障题的思路原型）</li>
+<li class=""><strong>70 以下</strong>：建议把《K8S集群初始化》的&quot;易踩坑记录&quot;整节重读一遍再测一次</li>
+</ul>
+<blockquote>
+<p>错题记录建议：把做错的题号和原因记在笔记里，Week 11（模拟考试与弱项补强）时这就是你的个性化题库。</p>
+</blockquote></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/K8S/CKA/Week0-1/05-复习测试.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/K8S/CKA/Week0-1/集群架构与控制平面组件"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Week 1 · 集群架构与控制平面组件</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/K8S/CKA/Week2/Pod创建与生命周期"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Pod 创建与生命周期</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#一填空题每空-1-分共-20-分" class="table-of-contents__link toc-highlight">一、填空题（每空 1 分，共 20 分）</a></li><li><a href="#二判断题每题-2-分共-10-分" class="table-of-contents__link toc-highlight">二、判断题（每题 2 分，共 10 分）</a></li><li><a href="#三简答题每题-8-分共-40-分" class="table-of-contents__link toc-highlight">三、简答题（每题 8 分，共 40 分）</a></li><li><a href="#四实操题每题-10-分共-30-分在集群上做" class="table-of-contents__link toc-highlight">四、实操题（每题 10 分，共 30 分，在集群上做）</a></li><li><a href="#一填空" class="table-of-contents__link toc-highlight">一、填空</a></li><li><a href="#二判断" class="table-of-contents__link toc-highlight">二、判断</a></li><li><a href="#三简答要点对照" class="table-of-contents__link toc-highlight">三、简答（要点对照）</a></li><li><a href="#四实操参考命令" class="table-of-contents__link toc-highlight">四、实操（参考命令）</a></li><li><a href="#计分与建议" class="table-of-contents__link toc-highlight">计分与建议</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Docs</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/docs/intro">Tutorial</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Social Links</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="mailto:xiao_nya@qq.com" target="_blank" rel="noopener noreferrer" class="footer__link-item">Mail<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://t.me/Forensics_Cat" target="_blank" rel="noopener noreferrer" class="footer__link-item">Telegram<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">Blog</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 My Project, Inc. Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
