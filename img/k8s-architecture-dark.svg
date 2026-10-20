@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 400" width="680" height="400" role="img" aria-labelledby="t d">
+<title id="t">Kubernetes 集群架构</title>
+<desc id="d">控制平面包含 kube-apiserver、etcd、kube-scheduler、kube-controller-manager、cloud-controller-manager；两个工作节点各包含 kubelet、kube-proxy、containerd 和 Pod。</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+
+<rect x="40" y="60" width="300" height="320" rx="16" fill="#0C447C" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="60" y="86" font-size="13" font-weight="500" fill="#B5D4F4">控制平面 Control Plane</text>
+
+<rect x="60" y="100" width="260" height="44" rx="8" fill="#042C53" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="190" y="122" font-size="13" font-weight="500" fill="#B5D4F4" text-anchor="middle" dominant-baseline="central">kube-apiserver</text>
+
+<rect x="60" y="164" width="124" height="44" rx="8" fill="#042C53" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="122" y="186" font-size="13" fill="#B5D4F4" text-anchor="middle" dominant-baseline="central">etcd</text>
+
+<rect x="196" y="164" width="124" height="44" rx="8" fill="#042C53" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="258" y="186" font-size="13" fill="#B5D4F4" text-anchor="middle" dominant-baseline="central">kube-scheduler</text>
+
+<rect x="60" y="228" width="260" height="44" rx="8" fill="#042C53" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="190" y="250" font-size="13" fill="#B5D4F4" text-anchor="middle" dominant-baseline="central">kube-controller-manager</text>
+
+<rect x="60" y="292" width="260" height="44" rx="8" fill="#042C53" stroke="#85B7EB" stroke-width="0.5"/>
+<text x="190" y="314" font-size="12" fill="#85B7EB" text-anchor="middle" dominant-baseline="central">cloud-controller-manager（可选）</text>
+
+<rect x="380" y="60" width="260" height="150" rx="16" fill="#085041" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="396" y="86" font-size="13" font-weight="500" fill="#9FE1CB">工作节点 Worker Node 1</text>
+<rect x="396" y="96" width="110" height="40" rx="8" fill="#04342C" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="451" y="116" font-size="12" fill="#9FE1CB" text-anchor="middle" dominant-baseline="central">kubelet</text>
+<rect x="514" y="96" width="110" height="40" rx="8" fill="#04342C" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="569" y="116" font-size="12" fill="#9FE1CB" text-anchor="middle" dominant-baseline="central">kube-proxy</text>
+<rect x="396" y="148" width="110" height="40" rx="8" fill="#04342C" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="451" y="168" font-size="12" fill="#9FE1CB" text-anchor="middle" dominant-baseline="central">containerd</text>
+<rect x="514" y="148" width="110" height="40" rx="8" fill="#04342C" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="569" y="168" font-size="12" fill="#9FE1CB" text-anchor="middle" dominant-baseline="central">Pod</text>
+
+<rect x="380" y="230" width="260" height="150" rx="16" fill="#085041" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="396" y="256" font-size="13" font-weight="500" fill="#9FE1CB">工作节点 Worker Node 2</text>
+<rect x="396" y="266" width="110" height="40" rx="8" fill="#04342C" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="451" y="286" font-size="12" fill="#9FE1CB" text-anchor="middle" dominant-baseline="central">kubelet</text>
+<rect x="514" y="266" width="110" height="40" rx="8" fill="#04342C" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="569" y="286" font-size="12" fill="#9FE1CB" text-anchor="middle" dominant-baseline="central">kube-proxy</text>
+<rect x="396" y="318" width="110" height="40" rx="8" fill="#04342C" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="451" y="338" font-size="12" fill="#9FE1CB" text-anchor="middle" dominant-baseline="central">containerd</text>
+<rect x="514" y="318" width="110" height="40" rx="8" fill="#04342C" stroke="#5DCAA5" stroke-width="0.5"/>
+<text x="569" y="338" font-size="12" fill="#9FE1CB" text-anchor="middle" dominant-baseline="central">Pod</text>
+
+<path d="M322 122 L392 116" fill="none" stroke="#85B7EB" stroke-width="0.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<path d="M322 140 L350 140 L350 286 L392 286" fill="none" stroke="#85B7EB" stroke-width="0.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<text x="352" y="196" font-size="11" fill="#85B7EB">watch / 上报</text>
+
+</g>
+</svg>
